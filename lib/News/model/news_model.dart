@@ -79,12 +79,12 @@ class Result {
         creator: json["creator"] == null
             ? []
             : List<String>.from(json["creator"]!.map((x) => x)),
-        videoUrl: json["video_url"],
-        description: json["description"],
-        content: json["content"],
+        videoUrl: json["video_url"] ?? "",
+        description: json["description"] ?? "",
+        content: json["content"] ?? "",
         pubDate: DateTime.parse(json["pubDate"]),
-        imageUrl: json["image_url"],
-        sourceId: json["source_id"],
+        imageUrl: json["image_url"] ?? "",
+        sourceId: json["source_id"] ?? "",
         // category: json["category"] !=null ?
         //     List<Category>.from(
         //         json["category"].map((x) => categoryValues.map[x]!)),
